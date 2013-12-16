@@ -3,6 +3,6 @@ Auth::Application.routes.draw do
 	resource :session, only:[:new, :create, :destroy]
   # resource :session, only: %w(new create destroy)
 
-  get '/dashboard', to: "dashboard#index"
+  get '/restaurant', to: "restaurants#index"
   root "welcome#index"
 end

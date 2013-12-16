@@ -1,0 +1,7 @@
+<h1>Restaurants#index</h1>
+<div class="span_12_of_12 search-bar">
+	<%= form_tag restaurant_path method: :get do %>
+		<%= text_field_tag :restaurants, params[:restaurant], placeholder: 'SPEK a restaurant!' %>
+		<%= submit_tag "Search" %>
+	<% end %>
+</div>

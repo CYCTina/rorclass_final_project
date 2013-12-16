@@ -1,31 +1,3 @@
 <h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<h2>Create your account here!</h2>
 
-<% @user.errors.full_messages.each do |msg| %>
-<div><%= msg %></div>
-<% end %>
-
-<%= form_for @user do |f| %>
-  <div>
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name, :autofocus => true %>
-  </div>
-  <div>
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div>
-    <%= f.label 'password_confirmation'  %><br>
-    <%= f.text_field 'password_confirmation' %>
-  </div>
-  <%= submit_tag 'Create My Account' %>
-<% end %>
+<%= render 'form' %>
